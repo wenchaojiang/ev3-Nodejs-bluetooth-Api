@@ -28,6 +28,8 @@ press a, b, c or d to switch control among motors.
 
 press up or down error to control motor output. 
 
+press ctrl-C to quit.
+
 
 Please Help
 ===============
