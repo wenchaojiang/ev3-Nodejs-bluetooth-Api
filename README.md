@@ -3,7 +3,7 @@ Ev3NodeJsBtAPI
 
 Control your Lego Ev3 robot without hacking into intelligent brick (over bluetooth).
 
-Motifition 
+motivation 
 ==============
 1. You may not like graph programming interface provided by official labview software (you know it is for children :p).
 2. You may not want to heck into intelligent brick (if you do, please check alternatives: a,b,c).
