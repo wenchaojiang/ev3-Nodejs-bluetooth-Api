@@ -9,7 +9,7 @@ motivation
 2. You may not want to heck into intelligent brick (if you do, check out alternatives: a,b,c).
 3. You are a nodejs fan.
 
-If 1 2 3 are true for you, module is the one for you. 
+If 1 2 3 are true for you, this module is the one for you. 
 The module provide an node js api for controlling Lego Ev3 robot over bluetooth. 
 You can write your robot controll program in nodejs, run it on any bluetooth enabled pc/laptop, control your Ev3 robot remotely.
 
@@ -34,6 +34,6 @@ press ctrl-C to quit.
 Please Help
 ===============
 This module is built by reverse engineering the bluetooch communication between offical android Lego app and Ev3 robot.
-Currently I only deciphered the control protocol for motors, not sensors. If you have any information on the protocol, plsease help.
+Currently I only deciphered the control protocol for motors, not sensors. If you have any information on the protocol, please help.
 
 New to nodejs and async world, please feel free to refector my code.
