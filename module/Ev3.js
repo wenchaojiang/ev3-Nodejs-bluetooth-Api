@@ -58,7 +58,7 @@ var Ev3_base = function(btport){
 		var size = ((this.getCounter()+header+body_a+body_b+body_c+body_d).length/2).toString(16); //check this 
 		var prefix = size + "00" + this.getCounter() + header ;
 		var body = prefix + body_a + body_b + body_c + body_d; 
-		console.log(body.toUpperCase());
+		//console.log(body.toUpperCase());
 		return  new Buffer( body.toUpperCase(), "hex");
 	};
 	var counter = 0;
@@ -142,10 +142,6 @@ Ev3_base.prototype.disconnect = function(callback){
 		 this.sp.close();
 	}); 
 }; 
-
-//--------------- Sensors ------------
-this.pullInterval = 100 // ms
-
 
 // -------------- Export -------------
 module.exports.base = Ev3_base;

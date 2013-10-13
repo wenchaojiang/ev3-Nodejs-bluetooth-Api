@@ -1,14 +1,10 @@
 var Ev3 = require ("./module/Ev3.js");
 var Ev3_base = Ev3.base;
 
-// ----------------test---------------
-var robot = new Ev3_base("/dev/tty.EV3-SerialPort"); // put your bluetooth socket.
-
-
 var motor_on_focus = "a";
 var motor_output = {"a": 0, "b":0,"c":0, "d":0};
 
-var readKeyStroke = function(target){
+var example_program = function(target){
 	var stdin = process.openStdin(); 
 	
 
@@ -53,9 +49,12 @@ var process_input = function(key,target){
 		target.sp.write( output,function(){});
   		// write the key to stdout all normal like
   		//process.stdout.write( key );
-  		process.stdout.write( motor_on_focus + ":" + motor_output[motor_on_focus] +"\n"  );
+  		process.stdout.write( motor_on_focus + " motor output:" + motor_output[motor_on_focus] +"\n"  );
 };
 
+// ----------------test---------------
+var robot = new Ev3_base("/dev/tty.EV3-SerialPort"); // put your bluetooth socket.
+
 robot.connect(function(){
-		robot.start_program(readKeyStroke); 
+		robot.start_program(example_program); // entry point of your program, replace example_program with your program.
 });

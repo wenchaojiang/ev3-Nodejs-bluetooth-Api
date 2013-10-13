@@ -1,0 +1,9 @@
+{
+  "name": "Ev3NodeJsBtAPI",
+  "description": "Bt Api for lego ev3 robot",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "serialport": "1.*"
+  }
+}
