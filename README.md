@@ -2,13 +2,15 @@ Ev3NodeJsBtAPI
 ==============
 
 Control your Lego Ev3 robot without hacking into intelligent brick (over bluetooth).
+A nodejs alternative to monobrick http://www.monobrick.dk/
 
 !!!!!!tested on firmware V1.01H!!!!!!!!!
+
 
 motivation 
 ==============
 1. You may not like graph programming interface provided by official labview software (you know it is for children :p).
-2. You may not want to heck into intelligent brick (if you do, check out alternatives: a,b,c).
+2. You may not want to heck into intelligent brick (if you do, check out alternatives: http://www.lejos.org/).
 3. You are a nodejs fan.
 
 If 1 2 3 are true for you, this module is the one for you. 
