@@ -19,6 +19,7 @@ Usage
 2. run "npm install"
 3. pair your laptop/pc with intelligent brick
 4. run example.js: "node example.js"
+5. see "example.js" for more details
 
 Example.js
 ==============
