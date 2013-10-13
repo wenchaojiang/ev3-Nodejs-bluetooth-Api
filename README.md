@@ -18,11 +18,13 @@ Usage
 1. go into "module" 
 2. run "npm install"
 3. pair your laptop/pc with intelligent brick
-4. run example.js "node example.js"
+4. run example.js: "node example.js"
 
 Example.js
 ==============
-
+./example.js  provide an interacive terminal interface for controlling motors.
+press a, b, c or d to switch control among motors.
+press up or down error to control motor output. 
 
 
 Please Help
