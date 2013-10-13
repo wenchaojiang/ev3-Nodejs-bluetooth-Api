@@ -1,0 +1,135 @@
+09-19 17:02:37.825: D/EV3CommReceiver(28133): Received 8 raw bytes: 0600010003920000
+09-19 17:02:37.825: D/EV3CommReceiver(28133): Parsed message#: SYSTEM_REPLY seqNr: 1 payload: 920000
+09-19 17:02:37.850: D/EV3CommReceiver(28133): Received 8 raw bytes: 0600020003930800
+09-19 17:02:37.850: D/EV3CommReceiver(28133): Parsed message#: SYSTEM_REPLY seqNr: 2 payload: 930800
+09-19 17:02:37.895: D/EV3CommReceiver(28133): Received 8 raw bytes: 0600030005980100
+09-19 17:02:37.895: D/EV3CommReceiver(28133): Parsed message#: SYSTEM_REPLY_ERROR seqNr: 3 payload: 980100
+09-19 17:02:38.915: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300050002
+09-19 17:02:38.915: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 5 payload: 
+09-19 17:02:39.025: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300060002
+09-19 17:02:39.025: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 6 payload: 
+09-19 17:02:39.135: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300070002
+09-19 17:02:39.135: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 7 payload: 
+09-19 17:02:39.220: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300080002
+09-19 17:02:39.220: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 8 payload: 
+09-19 17:02:39.315: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300090002
+09-19 17:02:39.315: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 9 payload: 
+09-19 17:02:39.425: D/EV3CommReceiver(28133): Received 5 raw bytes: 03000A0002
+09-19 17:02:39.425: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 10 payload: 
+09-19 17:02:39.525: D/EV3CommReceiver(28133): Received 5 raw bytes: 03000B0002
+09-19 17:02:39.525: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 11 payload: 
+09-19 17:02:39.625: D/EV3CommReceiver(28133): Received 5 raw bytes: 03000C0002
+09-19 17:02:39.625: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 12 payload: 
+09-19 17:02:39.735: D/EV3CommReceiver(28133): Received 5 raw bytes: 03000D0002
+09-19 17:02:39.735: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 13 payload: 
+09-19 17:02:39.835: D/EV3CommReceiver(28133): Received 5 raw bytes: 03000E0002
+09-19 17:02:39.835: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 14 payload: 
+09-19 17:02:39.940: D/EV3CommReceiver(28133): Received 5 raw bytes: 03000F0002
+09-19 17:02:39.940: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 15 payload: 
+09-19 17:02:40.025: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300100002
+09-19 17:02:40.025: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 16 payload: 
+09-19 17:02:40.130: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300110002
+09-19 17:02:40.130: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 17 payload: 
+09-19 17:02:40.225: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300120002
+09-19 17:02:40.225: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 18 payload: 
+09-19 17:02:40.350: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300130002
+09-19 17:02:40.350: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 19 payload: 
+09-19 17:02:40.425: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300140002
+09-19 17:02:40.425: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 20 payload: 
+09-19 17:02:40.530: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300150002
+09-19 17:02:40.530: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 21 payload: 
+09-19 17:02:40.630: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300160002
+09-19 17:02:40.630: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 22 payload: 
+09-19 17:02:40.730: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300170002
+09-19 17:02:40.730: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 23 payload: 
+09-19 17:02:40.835: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300180002
+09-19 17:02:40.835: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 24 payload: 
+09-19 17:02:40.925: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300190002
+09-19 17:02:40.925: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 25 payload: 
+09-19 17:02:41.025: D/EV3CommReceiver(28133): Received 5 raw bytes: 03001A0002
+09-19 17:02:41.025: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 26 payload: 
+09-19 17:02:41.130: D/EV3CommReceiver(28133): Received 5 raw bytes: 03001B0002
+09-19 17:02:41.130: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 27 payload: 
+09-19 17:02:41.230: D/EV3CommReceiver(28133): Received 5 raw bytes: 03001C0002
+09-19 17:02:41.230: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 28 payload: 
+09-19 17:02:41.340: D/EV3CommReceiver(28133): Received 5 raw bytes: 03001D0002
+09-19 17:02:41.340: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 29 payload: 
+09-19 17:02:41.420: D/EV3CommReceiver(28133): Received 5 raw bytes: 03001E0002
+09-19 17:02:41.425: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 30 payload: 
+09-19 17:02:41.520: D/EV3CommReceiver(28133): Received 5 raw bytes: 03001F0002
+09-19 17:02:41.525: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 31 payload: 
+09-19 17:02:41.630: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300200002
+09-19 17:02:41.630: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 32 payload: 
+09-19 17:02:41.725: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300210002
+09-19 17:02:41.725: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 33 payload: 
+09-19 17:02:41.835: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300220002
+09-19 17:02:41.835: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 34 payload: 
+09-19 17:02:41.930: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300230002
+09-19 17:02:41.930: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 35 payload: 
+09-19 17:02:42.035: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300240002
+09-19 17:02:42.035: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 36 payload: 
+09-19 17:02:42.135: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300250002
+09-19 17:02:42.135: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 37 payload: 
+09-19 17:02:42.235: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300260002
+09-19 17:02:42.235: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 38 payload: 
+09-19 17:02:42.335: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300270002
+09-19 17:02:42.335: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 39 payload: 
+09-19 17:02:42.435: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300280002
+09-19 17:02:42.435: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 40 payload: 
+09-19 17:02:42.535: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300290002
+09-19 17:02:42.535: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 41 payload: 
+09-19 17:02:42.645: D/EV3CommReceiver(28133): Received 5 raw bytes: 03002A0002
+09-19 17:02:42.645: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 42 payload: 
+09-19 17:02:42.735: D/EV3CommReceiver(28133): Received 5 raw bytes: 03002B0002
+09-19 17:02:42.735: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 43 payload: 
+09-19 17:02:42.835: D/EV3CommReceiver(28133): Received 5 raw bytes: 03002C0002
+09-19 17:02:42.835: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 44 payload: 
+09-19 17:02:42.935: D/EV3CommReceiver(28133): Received 5 raw bytes: 03002D0002
+09-19 17:02:42.935: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 45 payload: 
+09-19 17:02:43.035: D/EV3CommReceiver(28133): Received 5 raw bytes: 03002E0002
+09-19 17:02:43.035: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 46 payload: 
+09-19 17:02:43.135: D/EV3CommReceiver(28133): Received 5 raw bytes: 03002F0002
+09-19 17:02:43.135: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 47 payload: 
+09-19 17:02:43.235: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300300002
+09-19 17:02:43.235: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 48 payload: 
+09-19 17:02:43.335: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300310002
+09-19 17:02:43.335: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 49 payload: 
+09-19 17:02:43.430: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300320002
+09-19 17:02:43.430: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 50 payload: 
+09-19 17:02:43.530: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300330002
+09-19 17:02:43.530: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 51 payload: 
+09-19 17:02:43.630: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300340002
+09-19 17:02:43.630: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 52 payload: 
+09-19 17:02:43.735: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300350002
+09-19 17:02:43.735: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 53 payload: 
+09-19 17:02:43.835: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300360002
+09-19 17:02:43.835: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 54 payload: 
+09-19 17:02:43.935: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300370002
+09-19 17:02:43.935: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 55 payload: 
+09-19 17:02:44.035: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300380002
+09-19 17:02:44.035: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 56 payload: 
+09-19 17:02:44.135: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300390002
+09-19 17:02:44.135: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 57 payload: 
+09-19 17:02:44.230: D/EV3CommReceiver(28133): Received 5 raw bytes: 03003A0002
+09-19 17:02:44.230: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 58 payload: 
+09-19 17:02:44.335: D/EV3CommReceiver(28133): Received 5 raw bytes: 03003B0002
+09-19 17:02:44.335: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 59 payload: 
+09-19 17:02:44.445: D/EV3CommReceiver(28133): Received 5 raw bytes: 03003C0002
+09-19 17:02:44.445: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 60 payload: 
+09-19 17:02:44.540: D/EV3CommReceiver(28133): Received 5 raw bytes: 03003D0002
+09-19 17:02:44.540: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 61 payload: 
+09-19 17:02:44.635: D/EV3CommReceiver(28133): Received 5 raw bytes: 03003E0002
+09-19 17:02:44.635: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 62 payload: 
+09-19 17:02:44.740: D/EV3CommReceiver(28133): Received 5 raw bytes: 03003F0002
+09-19 17:02:44.740: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 63 payload: 
+09-19 17:02:44.840: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300400002
+09-19 17:02:44.845: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 64 payload: 
+09-19 17:02:44.935: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300410002
+09-19 17:02:44.935: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 65 payload: 
+09-19 17:02:45.040: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300420002
+09-19 17:02:45.045: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 66 payload: 
+09-19 17:02:45.140: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300430002
+09-19 17:02:45.140: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 67 payload: 
+09-19 17:02:45.240: D/EV3CommReceiver(28133): Received 5 raw bytes: 0300440002
+09-19 17:02:45.240: D/EV3CommReceiver(28133): Parsed message#: DIRECT_REPLY seqNr: 68 payload: 
+09-19 17:02:45.425: E/EV3CommReceiver(28133): java.io.IOException: Operation Canceled

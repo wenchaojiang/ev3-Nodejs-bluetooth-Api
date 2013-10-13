@@ -1,0 +1,15 @@
+1.Handshaking
+1) server: {"game" 
+2) client: {"game" "id" : [game_id] }
+
+
+
+2.Data
+Event name: "data"
+
+may contain objects
+1) "ack-instruction" attribute: "status", "id","player_id"
+2) "player" attribute: ""
+3) "location" attribute: ""
+4) "task" attribute: ""
+5) "system" 
