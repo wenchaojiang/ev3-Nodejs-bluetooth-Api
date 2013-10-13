@@ -22,6 +22,7 @@ Usage
 1. go into "module" 
 2. run "npm install"
 3. pair your laptop/pc with intelligent brick
+troubleshoot: http://www.ev-3.net/en/archives/97
 4. run example.js: "node example.js"
 5. see "example.js" for more details
 
