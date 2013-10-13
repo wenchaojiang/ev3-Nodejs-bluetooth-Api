@@ -23,7 +23,9 @@ Usage
 Example.js
 ==============
 ./example.js  provide an interacive terminal interface for controlling motors.
+
 press a, b, c or d to switch control among motors.
+
 press up or down error to control motor output. 
 
 
