@@ -34,6 +34,8 @@ press a, b, c or d to switch control among motors.
 
 press up or down error to control motor output. 
 
+a demo available at : http://www.youtube.com/watch?v=HHfj1cx_dlw
+
 press ctrl-C to quit.
 
 
