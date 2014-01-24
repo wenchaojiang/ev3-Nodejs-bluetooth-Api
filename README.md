@@ -9,13 +9,13 @@ A nodejs alternative to monobrick http://www.monobrick.dk/
 
 motivation 
 ==============
-1. You may not like graph programming interface provided by official labview software (you know it is for children :p).
-2. You may not want to heck into intelligent brick (if you do, check out alternatives: http://www.lejos.org/).
+1. You may not like graphic programming interface provided by official labview software (you know it is for kids :p).
+2. You may not want to heck into intelligent brick (if you do, check out the alternatives: http://www.lejos.org/).
 3. You are a nodejs fan.
 
 If 1 2 3 are true for you, this module is the one for you. 
 The module provide an node js api for controlling Lego Ev3 robot over bluetooth. 
-You can write your robot controll program in nodejs, run it on any bluetooth enabled pc/laptop, control your Ev3 robot remotely.
+You can write your robot control program in nodejs, run it on any bluetooth enabled pc/laptop, control your Ev3 robot remotely.
 
 Usage
 ==============
@@ -32,7 +32,7 @@ Example.js
 
 press a, b, c or d to switch control among motors.
 
-press up or down error to control motor output. 
+press up or down arrow to control motor output. 
 
 a demo available at : http://www.youtube.com/watch?v=HHfj1cx_dlw
 
