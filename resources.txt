@@ -2,13 +2,13 @@ Thanks to Cihan's resources,
 https://github.com/mindboards/ev3sources/blob/master/lms2012/c_com/source/c_com.h
 The communication protocol is clearly documented.
 But the bytecode it wraps in is a bit hard to decipher. 
-This file can help me read some of the bytecode:
+This file helps me read some of the bytecode:
 https://github.com/mindboards/ev3sources/blob/lms2012/lms2012/source/bytecodes.h
 
 Here is some foundings
 1) It looks like the official Android App compiles custom programs and push them to the brick VM.Motor controlling is achieved by directly manipulating values in program memory. 
 
-My interpretation of app logs of motor control is in EV3ServerLog-annotated.txt.
-It is now clear that we can directly control the moters through direct_system_command. Currenly, the module completely imitate the app communication log, which seems to be a bit dirty. 
+My interpretation of the app logs doing motor control is in EV3ServerLog-annotated.txt.
+It is now clear that we can directly control the moters through direct_system_command. Currenly, the module completely imitate the app communication log, which seems to be a bit hacky and dirty. 
 
-2) According to the documentation, the sensor reading can be read by direct system command as well, but the return values are hex numbers, which still requires some efforts to make sense (apart from touch senor which only give two values)
+2) According to the documentation, the sensor reading can be read through direct system command as well, but the return values are hex numbers, which still requires some efforts to make sense (apart from touch senor which only give two values)
