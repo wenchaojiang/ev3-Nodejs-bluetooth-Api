@@ -1,9 +1,31 @@
 {
-  "name": "Ev3NodeJsBtAPI",
+  "name": "ev3-nodejs-bt",
   "description": "Bt Api for lego ev3 robot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "dependencies": {
     "serialport": "1.*"
+  },
+  "main": "Ev3.js",
+  "devDependencies": {"serialport": "1.*"}
+,
+  "scripts": {
+    "test": "node Ev3.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wenchaojiang/Ev3NodeJsBtAPI"
+  },
+  "keywords": [
+    "node.js",
+    "ev3",
+    "lego",
+    "robot",
+    "bluetooth"
+  ],
+  "author": "Wenchao Jiang <psxwj@nottingham.ac.uk> (http://wenchaojames.wordpress.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wenchaojiang/Ev3NodeJsBtAPI/issues"
   }
 }
