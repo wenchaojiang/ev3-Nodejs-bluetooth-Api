@@ -6,6 +6,9 @@ A nodejs alternative to monobrick http://www.monobrick.dk/
 
 !!!!!!tested on firmware V1.01H!!!!!!!!!
 
+Latest updates
+==============
+Exisiting !!!. Implemented Color sensor. For more details, run and read example.js (3 Mar 2014)
 
 motivation 
 ==============
