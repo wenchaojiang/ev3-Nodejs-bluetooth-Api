@@ -2,6 +2,67 @@ var SP = require("serialport");
 var SerialPort = SP.SerialPort;
 var util = require('util');
 
+var Sensor = function(port,type,mode){
+	var port = port;
+	var type = type;
+	this.mode = mode;
+	this.callbacks = [];
+	var pull_command =  null; 
+	this.request_counter = -1;
+
+	this.pushCallback = function(callback){
+		this.callbacks.push(callback);
+	};
+
+	this.pullReading = function(counter,sp){
+		this.request_counter = counter;
+		//construct buffer
+		pull_command = new Buffer("0B00"+counter+"0001009A000"+ (port-1) + type +"0"+ mode +"60","hex");
+		//console.log(pull_command.toString("hex"));
+		sp.write(pull_command);
+	}
+
+}
+
+
+
+Sensor.prototype.processData = function(counter){
+	if(counter != this.request_counter){
+		return
+	}
+}
+
+
+//inherit sensors
+var ColorSensor = function(port,type,mode){
+	//paratistic inheritance
+	//http://www.crockford.com/javascript/inheritance.html
+	var sensor = new Sensor(port,type,mode);
+	sensor.processData =function(counter,value){
+		if(counter != this.request_counter){
+			return
+		}
+
+		var payload = value.substr(10,2);
+		for(i=0; i < this.callbacks.length ; i++){
+			this.callbacks[i](payload);
+		}
+	}
+
+	return sensor;
+
+}
+
+module.exports.COL_NULL = "00";
+module.exports.COL_BLACK = "0c";
+module.exports.COL_BLUE = "19";
+module.exports.COL_GREEN = "25";
+module.exports.COL_YELLOW = "32";
+module.exports.COL_RED = "3e";
+module.exports.COL_WHITE = "4b";
+module.exports.COL_BROWN = "57";
+
+//---------------base class-----------------
 var Ev3_base = function(btport){
 
 	//All sequence read from reverse engineering 
@@ -11,8 +72,6 @@ var Ev3_base = function(btport){
 	
 	this.PROGRAM_SEQ = new Buffer("B10002000193004C45474FAC0000006500020002000000280000000000000008000000AB0000000000000000000000841200841300820000820000841C01820000820000842E2E2F617070732F427269636B2050726F6772616D2F4F6E427269636B496D6167653132008400821B08300060858332000000403482020046646046821300348202004768604782080031604430006005444161820B00A5000161A6000140820400A300010086404082C1FF0A0A", "hex"); 
 	this.STOP_DOWNLOAD_SEQ = new Buffer("0600030001980000", "hex"); 
-
-
 
 	//single motor
 	//this.RUN_PROGRAM_SEQ = new Buffer("2D000400800020C00801842F6D6E742F72616D6469736B2F70726A732F6D6F62696C652E7262660040440301404440", "hex" ); 
@@ -64,11 +123,12 @@ var Ev3_base = function(btport){
 	this.getCounter = function(){
 		var cstring = counter.toString(16);
 		if(cstring.length ==  1){
-			cstring += "000";
+			cstring = "000"+ cstring ;
+			//console.log(cstring);
 		} else if (cstring.length ==  2){
-			cstring += "00"
+			cstring = "00" + cstring;
 		} else if (cstring.length ==  3){
-			cstring += "0"
+			cstring = "0" + cstring;
 		}
 		counter++;
 		return cstring;
@@ -109,22 +169,99 @@ var Ev3_base = function(btport){
 		connection.write(main.INIT_DOWNLOAD_SEQ,function(){ 
 			connection.write(main.PROGRAM_SEQ,function(){ 
 				connection.write(main.STOP_DOWNLOAD_SEQ,function(){ 
-						if(callback != null) callback();		
+						if(callback != null) callback();
+						//setupSensor();
 				});	
 			});
 		});
 	};
 }; 
 
+//-------------- Sensor ---------------------
+Ev3_base.prototype.S_TYPE_IR = 0;
+Ev3_base.prototype.S_TYPE_TOUCH = 0;
+Ev3_base.prototype.S_TYPE_COLOR = "1d";
+Ev3_base.prototype.S_TYPE_USONIC = 0;
+Ev3_base.prototype.S_TYPE_GYRO = 0;
+
+
+//color sensor modes
+Ev3_base.prototype.SM_COL_INTENSITY = 0;
+Ev3_base.prototype.SM_COL_AINTENSITY = 1;
+Ev3_base.prototype.SM_COL_COLOR = 2;
+
+Ev3_base.prototype.sensors= [];
+
+Ev3_base.prototype.sensorResponse = function(counter,value){
+	for (i =0 ; i<this.sensors.length; i++){
+		this.sensors[i].processData(counter,value);
+	}
+};
+
+Ev3_base.prototype.registerSensor = function(port,type,mode){
+	if(port>4 || port<1) {return; }//should return error
+	if(type == this.S_TYPE_COLOR){
+		this.sensors[port-1] = new ColorSensor(port,type,mode);
+	}
+	
+	
+}
+
+Ev3_base.prototype.reqisterSensorListener = function(port,callback){
+	this.sensors[port-1].pushCallback(callback);
+}
+
+Ev3_base.prototype.pullReadings = function(){
+	for (i =0 ; i<this.sensors.length; i++){
+		this.sensors[i].pullReading(this.getCounter(),this.sp);
+	}
+}
+
+
+
+
+
 // ------------- Connection ----------------
 
 Ev3_base.prototype.connect = function(callback){ 
 	var connection = this.sp;
 	var main = this;
+
+	connection.on("open", function () {
+		//console.log('open');
+		connection.on('data', function(data) {
+			//console.log('data received: ' + data.toString('hex')); 
+			//console.log('extract counter: ' + data.toString('hex').substr(4,4)); 
+			main.sensorResponse(data.toString('hex').substr(4,4),data.toString('hex'));
+		});
+
+		//start sensing
+		var sensing = function(){
+			/*var output = "0B00"+main.getCounter()+"0001009A00001d0260"; 
+			//var output = "0900000100050098046064"; 
+			console.log("data sent ready"); 
+			output = new Buffer(output,"hex");
+			connection.write( output,function(){}); */
+
+			main.pullReadings();
+
+			setTimeout(function(){
+				sensing();	
+			},400);
+
+			/*for (int i = 0; i< 4; i++){
+				//loop through ports
+			}*/
+		}
+
+		sensing();
+	}); 
+	
 	connection.open(function(err){
 		connection.write(main.INIT_SEQ,function(){
 			main.loadProgram(callback);
 		});
+		
 	});  
 };
 
