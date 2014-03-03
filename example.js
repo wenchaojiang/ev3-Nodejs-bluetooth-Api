@@ -36,16 +36,16 @@ var example_program_sensor = function(target){
   //              S_TYPE_COLOR (not implemented);
   //              S_TYPE_USONIC (not implemented);
   //              S_TYPE_GYRO (not implemented);
-  //sensor_mode: SM_COL_INTENSITY => color sensor , reflaction intensity (not implemented)
-  //             SM_COL_AINTENSITY => color sensor , ambient intensity (not implemented)
-  //             SM_COL_COLOR => color sensor, detecting 8 colors (implemented !!!!!!!!!!!!!)
-  //             for details of color sensor working mode: http://www.ev-3.net/en/archives/847
+  // sensor_mode: SM_COL_RINTENSITY => color sensor , reflaction intensity (implemented)
+  //              SM_COL_AINTENSITY => color sensor , ambient intensity (implemented)
+  //              SM_COL_COLOR => color sensor, detecting 8 colors (implemented)
+  //              for details of color sensor working mode: http://www.ev-3.net/en/archives/847
   // 
-  //e.g. set port 1 as a color sensor in mode color
+  // e.g. set port 1 as a color sensor in mode color
 
   target.registerSensor(1,target.S_TYPE_COLOR,target.SM_COL_COLOR);
 
-  target.reqisterSensorListener(1,function(result){
+  target.registerSensorListener(1,function(result){
     if(result == Ev3.COL_NULL) {
       console.log("color_less");
     }
@@ -77,7 +77,24 @@ var example_program_sensor = function(target){
       console.log("color_brown");
 
     }
+  }); 
+
+
+  /* 
+  //set set port 1 as a color sensor (in light reflection intensity mode)
+  target.registerSensor(1,target.S_TYPE_COLOR,target.SM_COL_RINTENSITY)
+  target.registerSensorListener(1,function(result){
+    //should ge a numeric result ranging from 1 to 100
+    console.log(result);
   });
+  
+  //set set port 1 as a color sensor (in ambient light intensity mode)
+  target.registerSensor(1,target.S_TYPE_COLOR,target.SM_COL_AINTENSITY)
+  target.registerSensorListener(1,function(result){
+    //should ge a numeric result ranging from 1 to 100
+    console.log(result);
+  });
+  */
 }
 
 var process_input = function(key,target){

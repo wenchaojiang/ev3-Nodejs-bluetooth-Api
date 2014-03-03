@@ -42,8 +42,13 @@ var ColorSensor = function(port,type,mode){
 		if(counter != this.request_counter){
 			return
 		}
-
 		var payload = value.substr(10,2);
+
+		//if mode is light intensity, change the result to numeric value
+		if(this.mode == 0 || this.mode ==1 ){
+			payload = parseInt(payload,16);
+		}
+
 		for(i=0; i < this.callbacks.length ; i++){
 			this.callbacks[i](payload);
 		}
@@ -186,7 +191,7 @@ Ev3_base.prototype.S_TYPE_GYRO = 0;
 
 
 //color sensor modes
-Ev3_base.prototype.SM_COL_INTENSITY = 0;
+Ev3_base.prototype.SM_COL_RINTENSITY = 0;
 Ev3_base.prototype.SM_COL_AINTENSITY = 1;
 Ev3_base.prototype.SM_COL_COLOR = 2;
 
@@ -207,7 +212,7 @@ Ev3_base.prototype.registerSensor = function(port,type,mode){
 	
 }
 
-Ev3_base.prototype.reqisterSensorListener = function(port,callback){
+Ev3_base.prototype.registerSensorListener = function(port,callback){
 	this.sensors[port-1].pushCallback(callback);
 }
 
