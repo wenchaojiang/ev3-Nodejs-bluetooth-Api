@@ -9,6 +9,7 @@ A nodejs alternative to monobrick http://www.monobrick.dk/
 Change log
 ==============
 Exisiting !!!. Implemented Color sensor. For more details, run and read example.js (3 Mar 2014)
+
 Nice !!!, Color sensor can now work in other 2 different modes (light reflection intensity, ambient light intensity) (3 Mar 2014) 
 
 motivation 
