@@ -98,7 +98,7 @@ var example_program_sensor = function(target){
   */
 
 
-  //set set port 1 as a touch sensor (in light reflection intensity mode)
+  //set set port 2 as a touch sensor 
   target.registerSensor(2,target.S_TYPE_TOUCH,0)
   target.registerSensorListener(2,function(result){
     //result is a bool value
