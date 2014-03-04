@@ -33,7 +33,7 @@ Sensor.prototype.processData = function(counter){
 }
 
 
-//inherit sensors
+//inherited sensors
 var ColorSensor = function(port,type,mode){
 	//paratistic inheritance
 	//http://www.crockford.com/javascript/inheritance.html
@@ -55,7 +55,26 @@ var ColorSensor = function(port,type,mode){
 	}
 
 	return sensor;
+}
 
+var TouchSensor = function(port,type,mode){
+	//paratistic inheritance
+	//http://www.crockford.com/javascript/inheritance.html
+	var sensor = new Sensor(port,type,mode);
+	sensor.processData = function(counter,value){
+		if(counter != this.request_counter){
+			return
+		}
+
+		var payload = value.substr(10,2);
+		var result = false;
+		if(payload == "00") { result = false; } else if(payload == "64") { result=true; }
+		for(i=0; i < this.callbacks.length ; i++){
+			this.callbacks[i](result);
+		}
+	}
+
+	return sensor;
 }
 
 module.exports.COL_NULL = "00";
@@ -184,7 +203,7 @@ var Ev3_base = function(btport){
 
 //-------------- Sensor ---------------------
 Ev3_base.prototype.S_TYPE_IR = 0;
-Ev3_base.prototype.S_TYPE_TOUCH = 0;
+Ev3_base.prototype.S_TYPE_TOUCH = "10";
 Ev3_base.prototype.S_TYPE_COLOR = "1d";
 Ev3_base.prototype.S_TYPE_USONIC = 0;
 Ev3_base.prototype.S_TYPE_GYRO = 0;
@@ -208,8 +227,10 @@ Ev3_base.prototype.registerSensor = function(port,type,mode){
 	if(type == this.S_TYPE_COLOR){
 		this.sensors[port-1] = new ColorSensor(port,type,mode);
 	}
-	
-	
+
+	if(type == this.S_TYPE_TOUCH){
+		this.sensors[port-1] = new TouchSensor(port,type,mode);
+	}	
 }
 
 Ev3_base.prototype.registerSensorListener = function(port,callback){
@@ -235,15 +256,15 @@ Ev3_base.prototype.connect = function(callback){
 	connection.on("open", function () {
 		//console.log('open');
 		connection.on('data', function(data) {
-			//console.log('data received: ' + data.toString('hex')); 
-			//console.log('extract counter: ' + data.toString('hex').substr(4,4)); 
+			/*console.log('data received: ' + data.toString('hex')); 
+			console.log('extract counter: ' + data.toString('hex').substr(4,4)); */
 			main.sensorResponse(data.toString('hex').substr(4,4),data.toString('hex'));
 		});
 
 		//start sensing
 		var sensing = function(){
-			/*var output = "0B00"+main.getCounter()+"0001009A00001d0260"; 
-			//var output = "0900000100050098046064"; 
+			//var output = "0B00"+main.getCounter()+"0001009A00001d0260"; 
+			/*var output = "0900000100050098046064"; 
 			console.log("data sent ready"); 
 			output = new Buffer(output,"hex");
 			connection.write( output,function(){}); */
@@ -254,9 +275,7 @@ Ev3_base.prototype.connect = function(callback){
 				sensing();	
 			},400);
 
-			/*for (int i = 0; i< 4; i++){
-				//loop through ports
-			}*/
+			
 		}
 
 		sensing();

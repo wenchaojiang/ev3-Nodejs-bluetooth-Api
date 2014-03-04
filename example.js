@@ -30,10 +30,11 @@ var example_program_motor = function(target){
 var example_program_sensor = function(target){
   // function  registerSensor (port_number, sensor_mode, sensor_mode)
   // port_number: 1-4
-  // sensor_type: S_TYPE_COLOR (implemented)
+  // sensor_type: S_TYPE_COLOR (implemented);
+  //              S_TYPE_TOUCH (implemented); 
   //              S_TYPE_IR (not implemented);
-  //              S_TYPE_TOUCH (not implemented); 
-  //              S_TYPE_COLOR (not implemented);
+  //              
+  //             
   //              S_TYPE_USONIC (not implemented);
   //              S_TYPE_GYRO (not implemented);
   // sensor_mode: SM_COL_RINTENSITY => color sensor , reflaction intensity (implemented)
@@ -95,6 +96,14 @@ var example_program_sensor = function(target){
     console.log(result);
   });
   */
+
+
+  //set set port 1 as a touch sensor (in light reflection intensity mode)
+  target.registerSensor(2,target.S_TYPE_TOUCH,0)
+  target.registerSensorListener(2,function(result){
+    //result is a bool value
+    console.log(result);
+  });
 }
 
 var process_input = function(key,target){
@@ -133,4 +142,6 @@ robot.connect(function(){
 
   //uncomment for color sensor example
   robot.start_program(example_program_sensor); 
+
+  //robot.start_program(function(){}); 
 });

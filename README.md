@@ -12,6 +12,9 @@ Exisiting !!!. Implemented Color sensor. For more details, run and read example.
 
 Nice !!!, Color sensor can now work in other 2 different modes (light reflection intensity, ambient light intensity) (3 Mar 2014) 
 
+Cool, Touch sensor reading implemented, see example.js for details (4 Mar 2014)
+
+
 motivation 
 ==============
 1. You may not like graphic programming interface provided by official labview software (you know it is for kids :p).
