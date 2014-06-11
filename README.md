@@ -1,6 +1,6 @@
 Ev3NodeJsBtAPI
 ==============
-
+![](/picture.jpg?raw=true)
 Control your Lego Ev3 robot without hacking into intelligent brick (over bluetooth).
 A nodejs alternative to monobrick http://www.monobrick.dk/
 
