@@ -4,11 +4,11 @@ Ev3NodeJsBtAPI
 Control your Lego Ev3 robot without hacking into intelligent brick (over bluetooth).
 A nodejs alternative to monobrick http://www.monobrick.dk/
 
-!!!!!!tested on firmware V1.01H!!!!!!!!!
+!!!!!!tested on firmware V1.01H!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 Change log
 ==============
-Exisiting !!!. Implemented Color sensor. For more details, run and read example.js (3 Mar 2014)
+Exisiting  Robot 🤖!!!. Implemented Color sensor. For more details, run and read example.js (3 Mar 2014)
 
 Nice !!!, Color sensor can now work in other 2 different modes (light reflection intensity, ambient light intensity) (3 Mar 2014) 
 
